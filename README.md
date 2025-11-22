@@ -28,54 +28,49 @@ This RAG system:
 
 ## 📁 Project Structure
 
-project/
+hybrid_rag_bot/
 │
 ├── data/
-│   └── ec2-ug.pdf
+│ └── ec2-ug.pdf
 │
 ├── src/
-│   ├── parsing/
-│   │   ├── pdf_reader.py
-│   │   ├── heading_extractor.py
-│   │   └── text_cleaner.py
-│   │
-│   ├── ingestion/
-│   │   ├── chunker.py
-│   │   └── ingest.py
-│   │
-│   ├── retrieval/
-│   │   └── retriever.py
-│   │
-│   ├── llm/
-│   │   ├── llama_client.py
-│   │   └── prompts.py
-│   │
-│   ├── pipeline/
-│   │   └── rag_pipeline.py
-│   │
-│   ├── api/
-│   │   └── cli_query.py
-│   │
-│   └── utils/
-│       ├── logger.py
-│       ├── types.py
-│       └── config.py
+│ ├── parsing/
+│ │ ├── pdf_reader.py
+│ │ ├── heading_extractor.py
+│ │ └── text_cleaner.py
+│ │
+│ ├── ingestion/
+│ │ ├── chunker.py
+│ │ └── ingest.py
+│ │
+│ ├── retrieval/
+│ │ └── retriever.py
+│ │
+│ ├── llm/
+│ │ ├── llama_client.py
+│ │ └── prompts.py
+│ │
+│ ├── pipeline/
+│ │ └── rag_pipeline.py
+│ │
+│ ├── api/
+│ │ └── cli_query.py
+│ │
+│ └── utils/
+│ ├── logger.py
+│ ├── types.py
+│ └── config.py
 │
 ├── chroma_db/
-│
-│
 ├── demo/
-│   ├── screenshots/
-│   └── demo_video.mp4
-│
+│ ├── screenshots/
+│ └── demo_video.mp4
 ├── app/
-│   └── app.py
-│
+│ └── app.py
 ├── requirements.txt
 ├── README.md
 ├── .env
 └── .gitignore
-
 
 
 ## ⚙️ How to Set Up & Run the Project
