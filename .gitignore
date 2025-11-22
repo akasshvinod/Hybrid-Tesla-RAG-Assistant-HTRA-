@@ -1,0 +1,147 @@
+###############################################
+# Tesla Hybrid RAG Bot - Production .gitignore
+###############################################
+
+# ------------------------
+# Python
+# ------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.dll
+*.log
+*.tmp
+
+# Byte-compiled / optimized / DLL files
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ------------------------
+# Virtual environment
+# ------------------------
+venv/
+env/
+.faiss-env/
+faiss-env/
+*.venv/
+
+# Conda
+conda-env/
+*/conda-meta/
+
+# ------------------------
+# Environment variables
+# ------------------------
+.env
+.env.local
+.env.*.backup
+*.env
+
+# ------------------------
+# ChromaDB vector store
+# ------------------------
+chroma_db/
+chroma/
+*.chroma
+index/
+*.idx
+*.bin
+*.hnsw
+*.lock
+
+# ------------------------
+# Ollama (model blobs/caches)
+# ------------------------
+.ollama/
+~ollama/
+ollama_cache/
+ollama_models/
+
+# ------------------------
+# Logs + cache
+# ------------------------
+logs/
+*.log
+*.out
+*.err
+
+# LangChain cache
+lc_cache/
+.langchain/
+.cache/
+__cache__/
+
+# Streamlit
+.streamlit/
+streamlit-logs/
+
+# tqdm temp files (rare)
+*.tqdm*
+
+# ------------------------
+# Notebooks
+# ------------------------
+.ipynb_checkpoints/
+*.checkpoint.ipynb
+
+# ------------------------
+# OS-specific
+# ------------------------
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+.cache/
+.Trash-*
+*~
+
+# ------------------------
+# IDE & Editor configs
+# ------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------------
+# Project data
+# ------------------------
+data/*.pdf
+data/*.csv
+data/*.txt
+data/**/*
+
+# Raw manual (big PDF)
+data/Owners_Manual.pdf
+
+# Intermediate parsing outputs
+parsed_pages/
+temp/
+tmp/
+*.pickle
+*.pkl
+
+# ------------------------
+# Model outputs
+# ------------------------
+*.jsonl
+*.json.tmp
+generated/
+results/
+artifacts/
+
+###############################################
+# END OF FILE
+###############################################

@@ -1,0 +1,40 @@
+##############################
+# Tesla Model 3 Hybrid RAG Bot
+# Production Requirements (2025)
+##############################
+
+# --- Core Utilities ---
+python-dotenv
+pydantic>=2.0
+tqdm
+rich
+requests
+
+# --- PDF Parsing (PyMuPDF) ---
+pymupdf==1.24.8
+
+# --- LangChain 2025 Stack ---
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+langchain-text-splitters>=0.2.0
+
+# --- LCEL + Message History ---
+langchainhub>=0.1.14
+
+# --- Vector DB ---
+chromadb>=0.5.0
+
+# --- LLM + Embeddings via Ollama ---
+ollama
+langchain-ollama>=0.2.0
+
+# --- Streamlit UI ---
+streamlit>=1.33
+streamlit-chat>=0.1.1
+
+# --- Optional (but used in print formatting) ---
+typing_extensions
+
+# --- Extra safety (some environments need these) ---
+numpy
