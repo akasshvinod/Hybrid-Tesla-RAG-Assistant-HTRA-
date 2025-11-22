@@ -86,8 +86,8 @@ hybrid_rag_bot/
 
 ### ⚙️ How to Set Up & Run the Project
 #### 1️⃣ Clone the Repository
-git clone https://github.com/YOUR_USERNAME/hybrid_rag_bot.git
-cd hybrid_rag_bot
+
+git clone https://github.com/akasshvinod/Hybrid-Tesla-RAG-Assistant-HTRA-.git
 
 #### 2️⃣ Create Environment
 conda create -n ragbot python=3.10 -y
