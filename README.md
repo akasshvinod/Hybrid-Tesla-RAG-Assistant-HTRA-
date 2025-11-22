@@ -1,38 +1,34 @@
-🚗 Tesla Model 3 Hybrid RAG Assistant
+# 🚗 **Tesla Model 3 Hybrid RAG Assistant**  
+**AI & Automation Internship Selection Challenge — Option 1**
 
-AI & Automation Internship Selection Challenge — Option 1
+---
 
-✅ Task Chosen
+## ✅ **Task Chosen**
+I selected **Option 1: Hybrid Support Bot (RAG System)** from the challenge instructions.  
+This task requires building a Retrieval-Augmented Generation (RAG) assistant that answers questions strictly from a document — in this case, the **Tesla Model 3 Owner’s Manual** — with no hallucinations or external knowledge.
 
-I selected Option 1: Hybrid Support Bot (RAG System) from the challenge instructions.
-This task requires building a Retrieval-Augmented Generation (RAG) assistant that answers questions strictly from a document — in this case, the Tesla Model 3 Owner’s Manual — with no hallucinations or external knowledge.
+---
 
-📘 Project Overview
-
+## 📘 **Project Overview**
 This project implements a fully offline, metadata-aware RAG system that:
 
-Parses the Tesla Model 3 Owner’s Manual (PDF)
-https://www.tesla.com/ownersmanual/model3/en_us/Owners_Manual.pdf
+- Parses the **Tesla Model 3 Owner’s Manual (PDF)**  
+  https://www.tesla.com/ownersmanual/model3/en_us/Owners_Manual.pdf
+- Extracts **chapters, headings, page numbers, and metadata**
+- Cleans and chunks the manual for efficient retrieval  
+- Embeds content using **nomic-embed-text** (via Ollama)
+- Stores vectors inside a **persistent ChromaDB** database
+- Retrieves relevant sections using **hybrid (vector + metadata) search**
+- Builds a strict **grounded RAG prompt** with hallucination prevention
+- Generates responses using **llama3.1:8b-instruct-q4_K_M** locally
+- Provides a **CLI assistant** and a **Streamlit UI**
 
-Extracts chapters, headings, page numbers, and structural metadata
+### ⭐ This project fulfills all requirements for **Option 1**.
 
-Cleans and chunks the manual for efficient retrieval
+---
 
-Embeds content using nomic-embed-text (via Ollama)
+## 📁 **Project Structure**
 
-Stores vectors inside a persistent ChromaDB database
-
-Retrieves the most relevant sections using hybrid (vector + metadata) search
-
-Builds a strict grounded RAG prompt with hallucination prevention
-
-Generates accurate answers using llama3.1:8b-instruct-q4_K_M locally
-
-Provides both a CLI assistant and a Streamlit UI
-
-This project fully satisfies Option 1: Hybrid Support Bot requirements.
-
-📁 Project Structure
 hybrid_rag_bot/
 │
 ├── data/
@@ -60,7 +56,7 @@ hybrid_rag_bot/
 │   │
 │   ├── api/
 │   │   └── cli_query.py
-│       │
+│   │
 │   └── utils/
 │       ├── logger.py
 │       ├── types.py
@@ -88,35 +84,35 @@ hybrid_rag_bot/
 ├── README.md
 └── .gitignore
 
-⚙️ How to Set Up & Run the Project
-1️⃣ Clone the Repository
+### ⚙️ How to Set Up & Run the Project
+#### 1️⃣ Clone the Repository
 git clone https://github.com/YOUR_USERNAME/hybrid_rag_bot.git
 cd hybrid_rag_bot
 
-2️⃣ Create Environment
+#### 2️⃣ Create Environment
 conda create -n ragbot python=3.10 -y
 conda activate ragbot
 
-3️⃣ Install Dependencies
+#### 3️⃣ Install Dependencies
 pip install -r requirements.txt
 
-4️⃣ Pull Required Models (Ollama)
+#### 4️⃣ Pull Required Models (Ollama)
 ollama pull llama3.1
 ollama pull nomic-embed-text
 
-📘 Step 1 — Ingest the Manual
+#### 📘 Step 1 — Ingest the Manual
 
 Converts the PDF → cleaned text → chunks → embeddings → Chroma vector store.
 
 python -m src.ingestion.ingest
 
-🔍 Step 2 — Test Retrieval
+#### 🔍 Step 2 — Test Retrieval
 python -m src.retrieval.retriever
 
-🤖 Step 3 — Run RAG Pipeline (CLI)
+#### 🤖 Step 3 — Run RAG Pipeline (CLI)
 python -m src.pipeline.rag_pipeline
 
-🖥️ Step 4 — Launch Streamlit Web Interface
+#### 🖥️ Step 4 — Launch Streamlit Web Interface
 streamlit run app/app.py
 
 The UI includes:
@@ -131,31 +127,37 @@ Conversation memory
 
 Optional chapter filter
 
-📚 Why These Libraries & Models?
-LangChain 2025
+### 📚 Why These Libraries & Models?
+- LangChain 2025
 
-For modular and maintainable RAG architecture (LCEL pipelines, prompts, retrieval logic).
+- Modern LCEL pipelines
 
-ChromaDB
+- Clean modular RAG orchestration
 
-Lightweight, persistent vector store ideal for technical/manual-based retrieval.
+- ChromaDB
 
-PyMuPDF
+- Fast, persistent local vector store
 
-Accurate PDF extraction needed for structured Tesla manual parsing.
+- PyMuPDF
 
-Ollama + Llama 3.1
+- Accurate PDF parsing for structured manuals
 
-Fully offline LLM with great grounding accuracy and no API costs.
+- Ollama + Llama 3.1
 
-nomic-embed-text
+- Fully offline inference
 
-Fast, high-quality embeddings suited for technical documents.
+- No API cost
 
-Streamlit
+- High grounding accuracy
 
-Easy-to-use interface for showcasing the assistant.
+- nomic-embed-text
 
-🎥 Demo Video
+- High-quality embeddings designed for documents
 
-(Add your Loom or YouTube link here)
+- Streamlit
+
+- Quick and interactive UI
+
+#### 🎥 Demo Video
+
+(Add Loom or YouTube link here)
