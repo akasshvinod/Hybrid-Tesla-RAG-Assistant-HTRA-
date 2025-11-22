@@ -158,6 +158,8 @@ Optional chapter filter
 
 - Quick and interactive UI
 
-#### 🎥 Demo Video
+## 🎥 Demo Video
+Here is the demonstration video for the Tesla Model 3 Hybrid RAG Assistant:
 
-(Add Loom or YouTube link here)
+🔗 https://www.loom.com/share/48e669a811b3458abf6c472efdb9500f
+
